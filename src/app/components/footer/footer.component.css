@@ -1,0 +1,119 @@
+footer {
+    width: 100vw;
+    background-color: var(--cor-fundo-principal);
+    display: flex;
+    align-items: center;
+    position: static;
+    justify-content: space-between;
+    gap: 4vw;
+    padding: 2vh 4vw;
+    border-top: 1px solid var(--cor-detalhes);
+     background-color: var(--cor-primaria);
+    width: 100%;
+
+    bottom: 0;
+  
+}
+
+.sobre{
+    width: 30vw;
+
+}
+
+#menu-icones,
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4vh;
+}
+
+#footer-logo {
+    height: 10vh;
+    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+
+}
+
+#footer-logo h3 {
+    font-size: 2vh;
+    font-weight: 500;
+}
+
+#footer-logo p {
+    font-size: 2vh;
+    font-weight: 300;
+}
+
+a {
+    font: var(--fonte-principal);
+    color: var(--cor-texto-principal);
+}
+
+
+
+
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    align-items: center;
+
+}
+
+footer ul li {
+    cursor: pointer;
+}
+
+footer .redes-sociais {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+#logoRedes {
+    width: 2rem;
+}
+
+p{
+    color: var(--cor-texto-descricao);
+}
+
+.social {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  font-size: 28px;
+  gap: 2vw;
+
+}
+
+.social a {
+
+  color: var(--cor-texto-secundario);
+  text-decoration: none;
+  margin: 10px;
+
+}
+
+.social:hover a {
+
+  opacity: 0.3;
+  transition: 0.5s;
+
+}
+
+.social:hover a:hover {
+
+  opacity: 1;
+  transition: 0.5s;
+
+}
