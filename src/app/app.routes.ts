@@ -9,23 +9,26 @@ import { LoginComponent } from './pages/login/login.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { MeusPedidosComponent } from './pages/meus-pedidos/meus-pedidos.component';
 import { adminGuard } from './guards/admin.guard';
+import { TermoseprivacidadeComponent } from './pages/termoseprivacidade/termoseprivacidade.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'login', component: LoginComponent },
     { path: 'cadastro', component: CadastroComponent },
     { path: 'meus-pedidos', component: MeusPedidosComponent },
-    
+
     // ROTA PROTEGIDA
-    { 
-        path: 'dashboard', 
+    {
+        path: 'dashboard',
         component: SalesDashboardComponent,
-        canActivate: [adminGuard] 
+        canActivate: [adminGuard]
     },
-    
+
     { path: 'product/:id', component: ProductDetailComponent },
     { path: 'search', component: SearchComponent },
     { path: 'sobre', component: SobreComponent },
     { path: 'contato', component: ContatoComponent },
+    { path: 'termoseprivacidade', component: TermoseprivacidadeComponent },
+
     { path: '**', redirectTo: '' }
 ];
