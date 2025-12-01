@@ -39,7 +39,7 @@ export class ProductDetailComponent implements OnInit {
       next: (data) => {
         this.produto = data;
         this.loading = false;
-        // 4. ASSIM QUE CARREGAR O PRODUTO, BUSCA OS RELACIONADOS PELA CATEGORIA
+        // ASSIM QUE CARREGAR O PRODUTO, BUSCA OS RELACIONADOS PELA CATEGORIA
         this.carregarRelacionados(data.category);
       },
       error: (err) => {

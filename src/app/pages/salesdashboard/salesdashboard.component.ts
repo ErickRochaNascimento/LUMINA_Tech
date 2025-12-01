@@ -1,6 +1,6 @@
 import { Component, OnInit, inject, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms'; // Importe FormsModule para o <select>
+import { FormsModule } from '@angular/forms';
 import { SalesService } from '../../services/sales.service';
 import { HeaderComponent } from "../../components/header/header.component";
 import { Chart, registerables } from 'chart.js/auto';
@@ -10,7 +10,7 @@ Chart.register(...registerables);
 @Component({
   selector: 'app-sales-dashboard',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, FormsModule], // Adicione FormsModule
+  imports: [CommonModule, HeaderComponent, FormsModule], 
   templateUrl: './salesdashboard.component.html',
   styleUrl: './salesdashboard.component.css'
 })
@@ -19,7 +19,7 @@ export class SalesDashboardComponent implements OnInit, AfterViewInit {
 
   totalVendas: number = 0;
   receitaTotal: number = 0;
-  itemMaisVendido: string = '-'; // Renomeado para ser genérico (pode ser marca ou produto)
+  itemMaisVendido: string = '-';
 
   // Tipo de filtro atual
   filtroAtual: 'produto' | 'categoria' | 'marca' = 'produto';

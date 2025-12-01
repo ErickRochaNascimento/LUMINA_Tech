@@ -11,7 +11,7 @@ import { HeaderComponent } from '../../components/header/header.component';
   standalone: true,
   imports: [CommonModule, CardProdutoComponent, HeaderComponent],
   templateUrl: './search.component.html',
-  styleUrl: './search.component.css' // Opcional se tiver CSS
+  styleUrl: './search.component.css' 
 })
 export class SearchComponent implements OnInit {
   private route = inject(ActivatedRoute);

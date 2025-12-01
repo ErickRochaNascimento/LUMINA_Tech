@@ -98,13 +98,11 @@
   color: #333;
 }
 
-/* Reutilizando estrutura flex/grid para o carrossel */
 .carousel-produtos {
   display: flex;
   gap: 1.5rem;
   overflow-x: auto;
   padding-bottom: 1rem;
-  /* Opcional: Estilização da barra de rolagem */
   scrollbar-width: thin;
 }
 

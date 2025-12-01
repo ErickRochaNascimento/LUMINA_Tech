@@ -14,7 +14,6 @@ import { Produto, CATEGORIAS_ELETRONICOS } from '../../models/produto.model';
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
-  // Injeção do serviço
   private cardProdutoService = inject(CardProdutoService);
 
   // Listas para armazenar os produtos
@@ -46,6 +45,7 @@ export class HomeComponent implements OnInit {
       error: (err) => console.error('Erro ao buscar laptops', err)
     });
 
+    //Busca Tablets
     this.cardProdutoService.getProdutos('tablets').subscribe({
       next: (data) => {
         this.tablets = data.products;
@@ -53,26 +53,22 @@ export class HomeComponent implements OnInit {
       error: (err) => console.error('Erro ao buscar tablets', err)
     });
 
+    //Busca produtos da Samsung
     this.cardProdutoService.searchProdutos('Samsung').subscribe({
       next: (data) => {
-        // Filtra client-side para garantir que é a marca mesmo, se desejar, 
-        // mas o search da API geralmente retorna resultados relevantes.
         this.produtosSamsung = data.products.filter(p => 
             CATEGORIAS_ELETRONICOS.includes(p.category)
         );
       }
     });
 
+    //Busca produtos da Apple
     this.cardProdutoService.searchProdutos('Apple').subscribe({
       next: (data) => {
         this.produtosApple = data.products.filter(p => 
             CATEGORIAS_ELETRONICOS.includes(p.category)
         );
-        // Filtra client-side para garantir que é a marca mesmo, se desejar, 
-        // mas o search da API geralmente retorna resultados relevantes.
       }
     });
   }
-
-
 }

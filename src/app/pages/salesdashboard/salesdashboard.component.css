@@ -38,7 +38,7 @@ h1 {
 }
 
 .value.highlight {
-    font-size: 1.2rem; /* Texto menor para nomes longos */
+    font-size: 1.2rem;
     color: #ae3727;
 }
 
@@ -47,25 +47,23 @@ h1 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    max-width: 800px; /* Limita largura do gráfico */
+    max-width: 800px; 
     margin: 0 auto;
 }
 
-/* --- Layout do Topo (Título + Filtro) --- */
 .header-dashboard {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
-    flex-wrap: wrap; /* Garante responsividade em telas pequenas */
+    flex-wrap: wrap; 
     gap: 15px;
 }
 
 .header-dashboard h1 {
-    margin-bottom: 0; /* Remove a margem antiga para alinhar com o select */
+    margin-bottom: 0; 
 }
 
-/* --- Estilização do Select/Input --- */
 .filter-box {
     display: flex;
     align-items: center;
@@ -104,31 +102,26 @@ h1 {
 }
 
 
-/* Container do Gráfico */
 .chart-container {
     background-color: var(--cor-fundo-principal);
-    border-radius: 16px; /* Bordas bem arredondadas */
+    border-radius: 16px; 
     padding: 25px;
-    margin: 30px auto; /* Centralizado com margem vertical */
+    margin: 30px auto; 
     
-    /* Sombra suave e moderna (Glassmorphism sutil) */
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); 
     border: 1px solid rgba(0, 0, 0, 0.05);
     
-    /* Controle de Tamanho */
-    max-width: 1000px; /* Um pouco mais largo que antes */
-    width: 90%;        /* Responsivo */
+    max-width: 1000px; 
+    width: 90%;     
     
-    /* Importante para o Chart.js não "estourar" o tamanho */
     position: relative; 
-    height: 500px;     /* Altura fixa para garantir boa visualização */
+    height: 500px;     
 }
 
-/* Ajuste para telas menores (Celulares/Tablets) */
 @media (max-width: 768px) {
     .chart-container {
         padding: 15px;
-        height: 350px; /* Menor em telas pequenas */
+        height: 350px; 
         width: 100%;
         border-radius: 12px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);

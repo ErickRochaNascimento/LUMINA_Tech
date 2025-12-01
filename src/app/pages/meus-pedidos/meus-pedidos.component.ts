@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Pipe Currency e Date
+import { CommonModule } from '@angular/common'; 
 import { SalesService } from '../../services/sales.service';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
