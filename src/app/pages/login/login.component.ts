@@ -19,13 +19,11 @@ export class LoginComponent {
   email = ''; senha = '';
 
   entrar() {
-    // Cria o objeto que o serviço espera
     const dadosLogin = {
-      nome: this.email, // Ou this.usuario.nome, dependendo do seu form
+      nome: this.email, 
       senha: this.senha
     };
 
-    // Envia apenas 1 argumento (o objeto)
     this.auth.login(dadosLogin).subscribe({
       next: (user) => {
         this.router.navigate(['/']);

@@ -18,6 +18,7 @@ export class CadastroComponent {
   auth = inject(AuthService);
   router = inject(Router);
   dados = { nome: '', email: '', senha: '' };
+  aceitouTermos = false;
 
   registrar() {
     if (this.auth.cadastrar(this.dados)) {
