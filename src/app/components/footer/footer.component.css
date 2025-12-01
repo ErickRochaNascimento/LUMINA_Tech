@@ -8,16 +8,13 @@ footer {
     gap: 4vw;
     padding: 2vh 4vw;
     border-top: 1px solid var(--cor-detalhes);
-     background-color: var(--cor-primaria);
+    background-color: var(--cor-primaria);
     width: 100%;
-
     bottom: 0;
-  
 }
 
 .sobre{
     width: 30vw;
-
 }
 
 #menu-icones,
@@ -31,7 +28,6 @@ footer {
 
 #footer-logo {
     height: 10vh;
-    
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -53,10 +49,6 @@ a {
     font: var(--fonte-principal);
     color: var(--cor-texto-principal);
 }
-
-
-
-
 
 footer ul {
     display: flex;
@@ -86,34 +78,26 @@ p{
 }
 
 .social {
-
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 5px;
   font-size: 28px;
   gap: 2vw;
-
 }
 
 .social a {
-
   color: var(--cor-texto-secundario);
   text-decoration: none;
   margin: 10px;
-
 }
 
 .social:hover a {
-
   opacity: 0.3;
   transition: 0.5s;
-
 }
 
 .social:hover a:hover {
-
   opacity: 1;
   transition: 0.5s;
-
 }

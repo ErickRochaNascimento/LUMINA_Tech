@@ -17,7 +17,7 @@ header {
     gap: 4vw;
 }
 
-#header-logo{
+#header-logo {
     height: 10vh;
     align-items: center;
     justify-content: center;
@@ -25,14 +25,14 @@ header {
     align-content: center;
 }
 
-#header-logo h3{
+#header-logo h3 {
     font-size: 4vh;
     font-weight: 500;
 }
 
-#header-logo p{
+#header-logo p {
     font-size: 3vh;
-    font-weight: 300;    
+    font-weight: 300;
 }
 
 a {
@@ -40,21 +40,20 @@ a {
     color: var(--cor-texto-principal);
 }
 
-/* --- Estilos da Barra de Pesquisa --- */
 
 .search-container {
     display: flex;
     align-items: center;
-    background-color: var(--cor-fundo-principal); /* Fundo branco para destacar no header */
-    border: 1px solid var(--cor-detalhes); /* Usa a cor de borda do seu tema */
-    border-radius: 20px; /* Borda redonda (estilo pílula) */
+    background-color: var(--cor-fundo-principal);
+    border: 1px solid var(--cor-detalhes);
+    border-radius: 20px;
     padding: 5px 15px;
     transition: box-shadow 0.3s ease;
 }
 
 .search-container:focus-within {
     /* Efeito de brilho quando clica para digitar */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     border-color: var(--cor-destaque);
 }
 
@@ -64,7 +63,7 @@ a {
     background: transparent;
     font-size: 1rem;
     color: var(--cor-texto-secundario);
-    width: 200px; /* Largura fixa ou pode usar vw */
+    width: 29.3vw;
     font-family: inherit;
 }
 
@@ -79,17 +78,44 @@ a {
     color: var(--cor-texto-principal);
     transition: transform 0.2s;
 }
-.search-container img{
+
+.search-container img {
     height: 3vh;
 }
 
 .search-container button:hover {
-    transform: scale(1.1); /* Aumenta levemente a lupa ao passar o mouse */
+    transform: scale(1.1);
+    /* Aumenta levemente a lupa ao passar o mouse */
 }
 
 
-.user-area { display: flex; gap: 15px; align-items: center; }
-.ola { font-weight: bold; color: #003057; }
-.btn-sair { background: none; border: 1px solid #d9534f; color: #d9534f; padding: 5px 10px; border-radius: 4px; cursor: pointer; }
-.btn-sair:hover { background: #d9534f; color: white; }
-.link-login { font-weight: bold; color: #007bff; text-decoration: none; }
+.user-area {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.ola {
+    font-weight: bold;
+    color: #003057;
+}
+
+.btn-sair {
+    background: none;
+    border: 1px solid #d9534f;
+    color: #d9534f;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-sair:hover {
+    background: #d9534f;
+    color: white;
+}
+
+.link-login {
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
