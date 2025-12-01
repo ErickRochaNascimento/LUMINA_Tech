@@ -1,0 +1,53 @@
+<app-header></app-header>
+
+<main class="home-container">
+    
+    <section class="categoria-section">
+        <h2>Smartphones em Destaque</h2>
+        <div class="carousel-produtos">
+            @for (item of smartphones; track item.id) {
+                <app-card-produto [produto]="item"></app-card-produto>
+            }
+        </div>
+    </section>
+
+    <section class="categoria-section">
+        <h2>Laptops de Alta Performance</h2>
+        <div class="carousel-produtos">
+            @for (item of laptops; track item.id) {
+                <app-card-produto [produto]="item"></app-card-produto>
+            }
+        </div>
+    </section>
+
+    <section class="categoria-section">
+        <h2>Laptops de Alta Performance</h2>
+        <div class="carousel-produtos">
+            @for (item of tablets; track item.id) {
+                <app-card-produto [produto]="item"></app-card-produto>
+            }
+        </div>
+    </section>
+
+    <section class="categoria-section">
+        <h2>Destaques Samsung (Por Marca)</h2>
+        <div class="carousel-produtos">
+            @for (item of produtosSamsung; track item.id) {
+                <app-card-produto [produto]="item"></app-card-produto>
+            }
+        </div>
+    </section>
+
+    <section class="categoria-section">
+        <h2>Destaques Apple (Por Marca)</h2>
+        <div class="carousel-produtos">
+            @for (item of produtosApple; track item.id) {
+                <app-card-produto [produto]="item"></app-card-produto>
+            }
+        </div>
+    </section>
+     
+
+</main>
+
+<app-footer></app-footer>
