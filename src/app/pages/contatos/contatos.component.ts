@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { FooterComponent } from "../../components/footer/footer.component"; // Importante para o formulário funcionar
+import { FooterComponent } from "../../components/footer/footer.component"; 
 import { HeaderComponent } from '../../components/header/header.component';
 
 
@@ -20,7 +20,6 @@ export class ContatoComponent {
 
   enviarMensagem() {
     alert(`Obrigado, ${this.mensagem.nome}! Sua mensagem foi enviada com sucesso.`);
-    // Aqui você conectaria com o backend futuramente
-    this.mensagem = { nome: '', email: '', texto: '' }; // Limpa o form
+    this.mensagem = { nome: '', email: '', texto: '' }; 
   }
 }

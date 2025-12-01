@@ -86,7 +86,7 @@ h2 {
     gap: 15px;
     margin-top: 20px;
     margin-bottom: 30px;
-    background: #f8f9fa;
+    background: var(--fundo-principal);
     padding: 25px;
     border-radius: 8px;
     border-left: 4px solid var(--cor-texto-principal);
