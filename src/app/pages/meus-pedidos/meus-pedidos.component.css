@@ -1,0 +1,5 @@
+.container { max-width: 800px; margin: 30px auto; padding: 20px; }
+    .card-pedido { display: flex; align-items: center; gap: 20px; background: white; padding: 15px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    .card-pedido img { border-radius: 5px; object-fit: cover; }
+    .preco { color: #003057; font-weight: bold; font-size: 1.1rem; }
+    .data { color: #777; font-size: 0.9rem; }

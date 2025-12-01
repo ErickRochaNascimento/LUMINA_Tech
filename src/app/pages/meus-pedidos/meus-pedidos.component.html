@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>Meus Pedidos</h1>
+
+    <div *ngIf="pedidos.length === 0" class="empty">
+        <p>Você ainda não comprou nada.</p>
+    </div>
+
+    <div class="lista">
+        <div *ngFor="let item of pedidos" class="card-pedido">
+            <img [src]="item.img" alt="Produto" width="80">
+            <div class="info">
+                <h3>{{ item.productTitle }}</h3>
+                <p class="data">Comprado em: {{ item.date | date:'short' }}</p>
+                <p class="preco">{{ item.price | currency:'BRL' }}</p>
+            </div>
+        </div>
+    </div>
+</div>
