@@ -1,0 +1,45 @@
+.card-produto-container {
+    border-radius: 8px;
+    width: 20vw;
+    min-width: 19.5vw; /* Garante um tamanho mínimo */
+    position: relative;
+    background-color: #fff; /* Fundo branco para destaque */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra leve */
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.card-produto-container:hover {
+    transform: translateY(-5px); /* Efeito de levitar ao passar o mouse */
+}
+
+.card-conteudo {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.produto-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ajusta imagem sem distorcer */
+    border-radius: 4px;
+}
+
+.nome-preco h3 {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+.estrelas {
+    display: block;
+    color: #f39c12; /* Cor de estrela */
+}
+
+.btn-primary {
+    position: relative;
+    z-index: 10; /* Garante que o botão fique acima de overlays do card */
+    cursor: pointer;
+}
