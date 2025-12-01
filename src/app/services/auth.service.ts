@@ -18,7 +18,7 @@ export class AuthService {
   // --- VERIFICAÇÃO DE ADMIN ---
   isAdmin(): boolean {
     const user = this.currentUser();
-    // AQUI DEFINIMOS QUEM É O ADMIN
+    // DEFINI O ADMIN
     return user && user.email === 'admin@email.com'; 
   }
 
@@ -26,9 +26,6 @@ export class AuthService {
   login(usuario: Pick<Usuario, 'nome' | 'senha'>): Observable<Usuario> {
     const usuarios = this.getStoredUsers();
     
-    // Procura usuário que tenha o mesmo nome E senha (ou email, dependendo do seu form)
-    // Nota: Seu login.component usa 'nome', mas para ser admin geralmente usamos 'email'.
-    // Vou verificar ambos para garantir.
     const userEncontrado = usuarios.find((u: any) => 
       (u.nome === usuario.nome || u.email === usuario.nome) && u.senha === usuario.senha
     );
@@ -37,7 +34,6 @@ export class AuthService {
       this.salvarSessao(userEncontrado);
       return of(userEncontrado); // Retorna sucesso
     } else {
-      // Se for o login fixo de admin para teste (caso não tenha cadastrado)
       if (usuario.nome === 'admin@email.com' && usuario.senha === 'admin123') {
         const adminUser = { id: 1, nome: 'Administrador', email: 'admin@email.com', senha: '' };
         this.salvarSessao(adminUser);
@@ -92,7 +88,6 @@ export class AuthService {
     this.currentUser.set(sessao);
   }
 
-  // Mantido para compatibilidade com seu código antigo
   isAuthenticated(): boolean {
     return !!this.currentUser();
   }

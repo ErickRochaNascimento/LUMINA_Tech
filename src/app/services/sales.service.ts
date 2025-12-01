@@ -1,13 +1,13 @@
 import { Injectable, inject } from '@angular/core';
 import { Produto } from '../models/produto.model';
-import { AuthService } from './auth.service'; // Importe o AuthService
+import { AuthService } from './auth.service'; 
 
 @Injectable({
   providedIn: 'root'
 })
 export class SalesService {
   private storageKey = 'lumina_sales';
-  private authService = inject(AuthService); // Injete o Auth
+  private authService = inject(AuthService); 
 
   recordSale(produto: Produto): void {
     const user = this.authService.currentUser();
@@ -23,7 +23,7 @@ export class SalesService {
       productId: produto.id,
       productTitle: produto.title,
       price: produto.price,
-      img: produto.thumbnail, // Útil para mostrar na lista
+      img: produto.thumbnail, 
       date: new Date().toISOString(),
       userId: user.id // <--- VINCULA AO USUÁRIO
     };
@@ -39,7 +39,7 @@ export class SalesService {
     return sales ? JSON.parse(sales) : [];
   }
 
-  // Novo método para filtrar por usuário
+  // Filtra por usuário
   getSalesByUser(): any[] {
     const user = this.authService.currentUser();
     if (!user) return [];

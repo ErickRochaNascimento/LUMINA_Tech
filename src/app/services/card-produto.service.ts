@@ -1,4 +1,3 @@
-// src/app/services/card-produto.service.ts
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -19,7 +18,6 @@ export class CardProdutoService {
     return this.http.get<Produto>(`${this.apiUrl}/${id}`);
   }
 
-  // ADICIONE ESTE MÉTODO NOVO:
   searchProdutos(query: string): Observable<ProdutoResponse> {
     return this.http.get<ProdutoResponse>(`${this.apiUrl}/search?q=${query}`);
   }
