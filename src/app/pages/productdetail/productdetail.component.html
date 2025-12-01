@@ -1,0 +1,51 @@
+<app-header></app-header>
+
+<main class="detail-container">
+  @if (loading) {
+    <div class="loading">Carregando detalhes...</div>
+  } @else if (produto) {
+    <div class="breadcrumb">
+      <a routerLink="/">Home</a> > <span>{{ produto.title }}</span>
+    </div>
+
+    <div class="product-grid">
+      <div class="gallery">
+        <img [src]="produto.thumbnail" [alt]="produto.title" class="main-img">
+        <div class="thumbnails">
+          @for (img of produto.images; track $index) {
+            <img [src]="img" class="thumb">
+          }
+        </div>
+      </div>
+
+      <div class="info">
+        <h1 class="title">{{ produto.title }}</h1>
+        <div class="meta">
+          <span class="brand">Marca: {{ produto.brand }}</span>
+          <span class="rating">⭐ {{ produto.rating }}</span>
+        </div>
+        
+        <p class="description">{{ produto.description }}</p>
+        
+        <div class="price-box">
+          <span class="price">{{ produto.price | currency:'BRL' }}</span>
+        </div>
+
+        <button (click)="comprarProduto()" class="btn-buy">Comprar Agora</button>
+      </div>
+    </div>
+
+    @if (produtosRelacionados.length > 0) {
+      <section class="related-section">
+        <h2>Você também pode gostar</h2>
+        <div class="carousel-produtos">
+            @for (item of produtosRelacionados; track item.id) {
+                <app-card-produto [produto]="item"></app-card-produto>
+            }
+        </div>
+      </section>
+    }
+  }
+</main>
+
+<app-footer></app-footer>
