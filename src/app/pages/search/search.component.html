@@ -1,0 +1,15 @@
+<app-header></app-header>
+
+<main class="home-container" style="padding: 20px;">
+    <h2>Resultados para: "{{ termo }}"</h2>
+
+    <div class="carousel-produtos" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+        @if (produtos.length > 0) {
+            @for (item of produtos; track item.id) {
+                <app-card-produto [produto]="item"></app-card-produto>
+            }
+        } @else {
+            <p>Nenhum produto encontrado.</p>
+        }
+    </div>
+</main>
