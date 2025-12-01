@@ -8,7 +8,6 @@ import { ContatoComponent } from './pages/contatos/contatos.component';
 import { LoginComponent } from './pages/login/login.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { MeusPedidosComponent } from './pages/meus-pedidos/meus-pedidos.component';
-// Importe o Guard novo
 import { adminGuard } from './guards/admin.guard';
 
 export const routes: Routes = [
@@ -17,11 +16,11 @@ export const routes: Routes = [
     { path: 'cadastro', component: CadastroComponent },
     { path: 'meus-pedidos', component: MeusPedidosComponent },
     
-    // ROTA PROTEGIDA AQUI:
+    // ROTA PROTEGIDA
     { 
         path: 'dashboard', 
         component: SalesDashboardComponent,
-        canActivate: [adminGuard] // Adicione esta linha
+        canActivate: [adminGuard] 
     },
     
     { path: 'product/:id', component: ProductDetailComponent },
