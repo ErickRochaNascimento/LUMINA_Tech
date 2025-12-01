@@ -1,0 +1,12 @@
+<app-header></app-header>
+<div class="auth-container">
+    <h2>Crie sua Conta</h2>
+    <form (ngSubmit)="registrar()">
+        <input type="text" [(ngModel)]="dados.nome" name="nome" placeholder="Nome Completo" required>
+        <input type="email" [(ngModel)]="dados.email" name="email" placeholder="E-mail" required>
+        <input type="password" [(ngModel)]="dados.senha" name="senha" placeholder="Senha" required>
+        <button type="submit">Cadastrar</button>
+    </form>
+    <p>Já tem conta? <a routerLink="/login">Faça Login</a></p>
+</div>
+<app-footer></app-footer>
