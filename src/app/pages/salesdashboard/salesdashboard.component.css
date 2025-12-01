@@ -1,0 +1,136 @@
+.dashboard-container {
+    padding: 2rem 5vw;
+    background-color: var(--cor-fundo-principal);
+    min-height: 90vh;
+}
+
+h1 {
+    color: var(--cor-texto-principal);
+    margin-bottom: 2rem;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: var(--cor-fundo-principal);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.metric h3 {
+    color: var(--cor-detalhes);
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.metric .value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--cor-texto-secundario);
+    margin: 0;
+}
+
+.value.highlight {
+    font-size: 1.2rem; /* Texto menor para nomes longos */
+    color: #ae3727;
+}
+
+.chart-container {
+    background: var(--cor-branco);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    max-width: 800px; /* Limita largura do gráfico */
+    margin: 0 auto;
+}
+
+/* --- Layout do Topo (Título + Filtro) --- */
+.header-dashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap; /* Garante responsividade em telas pequenas */
+    gap: 15px;
+}
+
+.header-dashboard h1 {
+    margin-bottom: 0; /* Remove a margem antiga para alinhar com o select */
+}
+
+/* --- Estilização do Select/Input --- */
+.filter-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(250, 0, 0, 0);
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.filter-box label {
+    font-weight: 600;
+    color: var(--cor-texto-secundario);
+    font-size: 0.9rem;
+}
+
+.filter-box select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--cor-detalhes);
+    background-color: #ffffff00 ;
+    font-size: 0.95rem;
+    color: var(--cor-texto-secundario);
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.filter-box select:hover {
+    border-color: #bbb;
+}
+
+.filter-box select:focus {
+    border-color: var(--cor-destaque); 
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+
+/* Container do Gráfico */
+.chart-container {
+    background-color: var(--cor-fundo-principal);
+    border-radius: 16px; /* Bordas bem arredondadas */
+    padding: 25px;
+    margin: 30px auto; /* Centralizado com margem vertical */
+    
+    /* Sombra suave e moderna (Glassmorphism sutil) */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); 
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    
+    /* Controle de Tamanho */
+    max-width: 1000px; /* Um pouco mais largo que antes */
+    width: 90%;        /* Responsivo */
+    
+    /* Importante para o Chart.js não "estourar" o tamanho */
+    position: relative; 
+    height: 500px;     /* Altura fixa para garantir boa visualização */
+}
+
+/* Ajuste para telas menores (Celulares/Tablets) */
+@media (max-width: 768px) {
+    .chart-container {
+        padding: 15px;
+        height: 350px; /* Menor em telas pequenas */
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+}
