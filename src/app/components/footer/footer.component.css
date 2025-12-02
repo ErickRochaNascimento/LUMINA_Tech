@@ -9,8 +9,8 @@ footer {
     padding: 2vh 4vw;
     border-top: 1px solid var(--cor-detalhes);
     background-color: var(--cor-primaria);
-    width: 100%;
     bottom: 0;
+    height: 14.40vh;
 }
 
 .sobre{
