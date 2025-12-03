@@ -51,45 +51,46 @@ export class SalesDashboardComponent implements OnInit, AfterViewInit {
     this.receitaTotal = vendas.reduce((acc: number, venda: any) => acc + venda.price, 0);
   }
 
-  gerarGrafico() {
+ gerarGrafico() {
     const vendas = this.salesService.getSales();
-    
-    // Destrói gráfico anterior se existir para evitar sobreposição
+
     if (this.chartInstance) {
       this.chartInstance.destroy();
     }
 
-    // Agrupamento dinâmico baseado no filtro
-    const dadosAgrupados: any = {};
-    
+    const dadosReceita: any = {};
+    const dadosQuantidade: any = {};
+
     vendas.forEach((v: any) => {
       let chave = '';
       if (this.filtroAtual === 'produto') chave = v.productTitle;
       else if (this.filtroAtual === 'categoria') chave = v.category;
       else if (this.filtroAtual === 'marca') chave = v.brand;
 
-      dadosAgrupados[chave] = (dadosAgrupados[chave] || 0) + v.price;
+      dadosReceita[chave] = (dadosReceita[chave] || 0) + v.price;
+      dadosQuantidade[chave] = (dadosQuantidade[chave] || 0) + 1;
     });
 
-    // Calcular o "Top Item" baseado no agrupamento atual
-    if (Object.keys(dadosAgrupados).length > 0) {
-      this.itemMaisVendido = Object.keys(dadosAgrupados).reduce((a, b) => 
-        dadosAgrupados[a] > dadosAgrupados[b] ? a : b
+    // Lógica do Item Mais Vendido (Baseado em Receita)
+    if (Object.keys(dadosReceita).length > 0) {
+      this.itemMaisVendido = Object.keys(dadosReceita).reduce((a, b) =>
+        dadosReceita[a] > dadosReceita[b] ? a : b
       );
     } else {
       this.itemMaisVendido = '-';
     }
 
-    const labels = Object.keys(dadosAgrupados);
-    const data = Object.values(dadosAgrupados);
+    const labels = Object.keys(dadosReceita);
+    const dataReceita = labels.map(label => dadosReceita[label]);
+    const dataQtd = labels.map(label => dadosQuantidade[label]);
 
     this.chartInstance = new Chart(this.salesChart.nativeElement, {
       type: 'bar',
       data: {
         labels: labels,
         datasets: [{
-          label: `Receita por ${this.filtroAtual.toUpperCase()} (R$)`,
-          data: data as number[],
+          label: `Receita (R$)`,
+          data: dataReceita as number[], // A altura da barra continua sendo a Receita
           backgroundColor: '#324e67',
           borderColor: '#2997FF',
           borderWidth: 1
@@ -99,7 +100,26 @@ export class SalesDashboardComponent implements OnInit, AfterViewInit {
         responsive: true,
         plugins: {
           legend: { position: 'top' },
-          title: { display: true, text: `Performance por ${this.filtroAtual}` }
+          title: { display: true, text: `Performance por ${this.filtroAtual}` },
+          // Legenda flutuante
+          tooltip: {
+            callbacks: {
+              label: (context) => {
+                // Pega o índice da barra onde o mouse está
+                const index = context.dataIndex;
+                
+                // Busca a quantidade correspondente naquele índice
+                const quantidade = dataQtd[index];
+                
+                // Pega o valor monetário da barra
+                const valor = context.raw; 
+                const valorFormatado = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor as number);
+
+                // Retorna a frase personalizada
+                return `Vendas: ${quantidade} un. | Total: ${valorFormatado}`;
+              }
+            }
+          }
         }
       }
     });

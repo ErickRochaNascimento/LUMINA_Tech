@@ -136,7 +136,6 @@ h1 {
 
 }
 
-
 @media (max-width: 600px) {
     .header-dashboard {
         flex-direction: column;
