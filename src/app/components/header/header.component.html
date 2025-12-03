@@ -1,23 +1,26 @@
 <header>
-    <a id="header-logo" routerLink="/"><h3>LUMINA</h3><p>Tech</p></a>
-    
+    <a id="header-logo" routerLink="/">
+        <h3>LUMINA</h3>
+        <p>Tech</p>
+    </a>
+
     <nav id="menu">
         <li><a routerLink="/">Home</a></li>
         <li><a routerLink="/sobre">Sobre</a></li>
-        
+
         <li *ngIf="auth.isAdmin()">
             <a routerLink="/dashboard" style="color: #d9534f; font-weight: bold;">Dashboard</a>
         </li>
 
         <li><a routerLink="/contato">Contato</a></li>
     </nav>
-    
+
     <nav id="menu-icones">
         <div class="search-container">
             <input type="text" placeholder="Buscar..." [(ngModel)]="termoBusca" (keyup.enter)="pesquisar()">
             <button (click)="pesquisar()"><img src="iconLupa.png" alt=""></button>
         </div>
-        
+
         <div class="user-area" *ngIf="auth.currentUser() as user; else loginTemplate">
             <span class="ola">Olá, {{ user.nome }}</span>
             <a *ngIf="!auth.isAdmin()" routerLink="/meus-pedidos" title="Meus Pedidos">Meus Pedidos</a>
@@ -28,4 +31,12 @@
             <a routerLink="/login" class="link-login">Login</a>
         </ng-template>
     </nav>
+    
+    <button (click)="themeService.toggleTheme()" class="btn-theme" title="Alternar Tema">
+    <img 
+        [src]="themeService.isDarkTheme() ? 'iconSol.png' : 'iconLua.png'" 
+        alt="Ícone de tema"
+        class="icon-theme"
+    >
+</button>
 </header>

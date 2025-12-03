@@ -120,6 +120,41 @@ a {
     text-decoration: none;
 }
 
+.btn-theme {
+    background-color: var(--cor-fundo-principal);
+}
+
+.btn-theme {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-theme:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.icon-theme {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.btn-theme:hover .icon-theme {
+    transform: rotate(15deg) scale(1.1);
+}
+
+body.dark-theme .btn-theme:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;

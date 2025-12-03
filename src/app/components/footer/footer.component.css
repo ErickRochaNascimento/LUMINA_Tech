@@ -11,35 +11,34 @@ footer {
     flex-wrap: wrap;
 }
 
-.sobre{
-    width: 30vw;
-}
-
 #menu-icones,
 #menu {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 4vh;
 }
 
 #footer-logo {
+    height: 10vh;
+    width: fit-content;
     align-items: center;
     justify-content: center;
     text-align: center;
     align-content: center;
-
 }
 
 #footer-logo h3 {
     font-size: 2vh;
     font-weight: 500;
+    width: fit-content;
 }
 
 #footer-logo p {
     font-size: 2vh;
     font-weight: 300;
+    width: fit-content;
+
 }
 
 a {
@@ -70,33 +69,33 @@ footer .redes-sociais {
     width: 2rem;
 }
 
-p{
+p {
     color: var(--cor-texto-descricao);
 }
 
 .social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 5px;
-  font-size: 28px;
-  gap: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    font-size: 28px;
+    gap: 2vw;
 }
 
 .social a {
-  color: var(--cor-texto-secundario);
-  text-decoration: none;
-  margin: 10px;
+    color: var(--cor-texto-secundario);
+    text-decoration: none;
+    margin: 10px;
 }
 
 .social:hover a {
-  opacity: 0.3;
-  transition: 0.5s;
+    opacity: 0.3;
+    transition: 0.5s;
 }
 
 .social:hover a:hover {
-  opacity: 1;
-  transition: 0.5s;
+    opacity: 1;
+    transition: 0.5s;
 }
 
 @media (max-width: 768px) {
@@ -117,7 +116,7 @@ p{
     footer ul {
         justify-content: center;
     }
-    
+
     #menu-icones {
         width: 100%;
         border-top: 1px solid #ccc;

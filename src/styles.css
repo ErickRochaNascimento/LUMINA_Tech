@@ -24,6 +24,20 @@
   --fonte-principal: 'Inter', sans-serif;
 }
 
+.dark-theme {
+  /* Inversão das cores para o modo escuro */
+  --cor-fundo-principal: #121212;       
+  --cor-texto-principal: #e0e0e0;       
+  --cor-texto-secundario: #b0b0b0;
+  --cor-texto-descricao: #a0a0a0;
+  --cor-detalhes: #808080;
+  --cor-branco: #1e1e1e;                
+}
+
+body, .card-produto-container, header, footer {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 /* --- APLICAÇÃO GLOBAL --- */
 body {
   margin: 0;
