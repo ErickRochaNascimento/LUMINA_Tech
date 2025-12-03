@@ -21,14 +21,8 @@
  button {
     width: 100%;
     padding: 10px;
-    background: var(--cor-destaque);
-    color: var(--cor-branco);
     border: none;
-    border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
  }
 
- button:hover {
-    background: #001a33;
- }
