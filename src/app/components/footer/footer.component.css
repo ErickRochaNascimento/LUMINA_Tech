@@ -1,16 +1,15 @@
 footer {
-    width: 100vw;
+    width: 100%;
     background-color: var(--cor-fundo-principal);
     display: flex;
     align-items: center;
-    position: static;
     justify-content: space-between;
     gap: 4vw;
     padding: 2vh 4vw;
     border-top: 1px solid var(--cor-detalhes);
-    background-color: var(--cor-primaria);
     bottom: 0;
     height: 14.40vh;
+    box-sizing: border-box;
 }
 
 .sobre{
@@ -27,7 +26,6 @@ footer {
 }
 
 #footer-logo {
-    height: 10vh;
     align-items: center;
     justify-content: center;
     text-align: center;
