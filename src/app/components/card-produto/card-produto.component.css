@@ -1,10 +1,11 @@
 .card-produto-container {
     border-radius: 8px;
     width: 280px;
-    min-width: 280px; 
+    min-width: 280px;
     position: relative;
     background-color: var(--cor-branco);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra leve */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
     overflow: hidden;
     margin-bottom: 20px;
     transition: transform 0.2s;
@@ -12,7 +13,8 @@
 }
 
 .card-produto-container:hover {
-    transform: translateY(-5px); /* Efeito de levitar ao passar o mouse */
+    transform: translateY(-5px);
+    /* Efeito de levitar ao passar o mouse */
 }
 
 .card-conteudo {
@@ -20,12 +22,13 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    height: 394px;
 }
 
 .produto-img {
     width: 100%;
     height: 200px;
-    object-fit: contain; 
+    object-fit: contain;
     border-radius: 4px;
 }
 
@@ -40,11 +43,16 @@
 
 .estrelas {
     display: block;
-    color: #f39c12; 
+    color: #f39c12;
 }
 
+
+
 .btn-primary {
-    position: relative;
-    z-index: 10; 
+    position: absolute;
+    z-index: 10;
     cursor: pointer;
+    margin-top: 325px;
+    justify-content: center;
+    margin-left: 20%;
 }
