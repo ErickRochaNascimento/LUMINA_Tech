@@ -2,7 +2,6 @@ import { Component, OnInit, inject, ElementRef, ViewChild, AfterViewInit } from 
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SalesService } from '../../services/sales.service';
-import { HeaderComponent } from "../../components/header/header.component";
 import { Chart, registerables } from 'chart.js/auto';
 
 Chart.register(...registerables);
@@ -10,7 +9,7 @@ Chart.register(...registerables);
 @Component({
   selector: 'app-sales-dashboard',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, FormsModule], 
+  imports: [CommonModule, FormsModule], 
   templateUrl: './salesdashboard.component.html',
   styleUrl: './salesdashboard.component.css'
 })

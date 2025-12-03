@@ -4,14 +4,12 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CardProdutoService } from '../../services/card-produto.service';
 import { SalesService } from '../../services/sales.service';
 import { Produto } from '../../models/produto.model';
-import { HeaderComponent } from "../../components/header/header.component";
-import { FooterComponent } from "../../components/footer/footer.component";
 import { CardProdutoComponent } from '../../components/card-produto/card-produto.component';
 
 @Component({
   selector: 'app-product-detail',
   standalone: true,
-  imports: [CommonModule, RouterLink, HeaderComponent, FooterComponent, CardProdutoComponent],
+  imports: [CommonModule, RouterLink, CardProdutoComponent],
   templateUrl: './productdetail.component.html',
   styleUrl: './productdetail.component.css'
 })
@@ -23,6 +21,8 @@ export class ProductDetailComponent implements OnInit {
   produtosRelacionados: Produto[] = [];
   produto: Produto | null = null;
   loading = true;
+
+  imagemDestaque: string = '';
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -38,6 +38,9 @@ export class ProductDetailComponent implements OnInit {
     this.produtoService.getProdutoById(id).subscribe({
       next: (data) => {
         this.produto = data;
+
+        this.imagemDestaque = data.thumbnail;
+
         this.loading = false;
         // ASSIM QUE CARREGAR O PRODUTO, BUSCA OS RELACIONADOS PELA CATEGORIA
         this.carregarRelacionados(data.category);
@@ -56,6 +59,10 @@ export class ProductDetailComponent implements OnInit {
         this.produtosRelacionados = resp.products.filter(p => p.id !== this.produto?.id);
       }
     });
+  }
+
+  alterarImagem(url: string) {
+    this.imagemDestaque = url;
   }
 
   comprarProduto() {

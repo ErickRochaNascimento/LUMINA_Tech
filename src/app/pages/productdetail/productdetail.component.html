@@ -8,10 +8,16 @@
 
     <div class="product-grid">
       <div class="gallery">
-        <img [src]="produto.thumbnail" [alt]="produto.title" class="main-img">
+        <img [src]="imagemDestaque" [alt]="produto.title" class="main-img">
+
         <div class="thumbnails">
           @for (img of produto.images; track $index) {
-            <img [src]="img" class="thumb">
+            <img 
+                [src]="img" 
+                class="thumb" 
+                (click)="alterarImagem(img)"
+                [class.active]="imagemDestaque === img"
+            >
           }
         </div>
       </div>
