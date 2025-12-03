@@ -23,6 +23,8 @@ export class SalesService {
       productId: produto.id,
       productTitle: produto.title,
       price: produto.price,
+      category: produto.category, 
+      brand: produto.brand,
       img: produto.thumbnail, 
       date: new Date().toISOString(),
       userId: user.id // <--- VINCULA AO USUÁRIO
