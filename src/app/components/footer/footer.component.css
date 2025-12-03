@@ -7,9 +7,8 @@ footer {
     gap: 4vw;
     padding: 2vh 4vw;
     border-top: 1px solid var(--cor-detalhes);
-    bottom: 0;
-    height: 14.40vh;
     box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
 .sobre{
@@ -98,4 +97,30 @@ p{
 .social:hover a:hover {
   opacity: 1;
   transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+
+    .sobre {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer ul {
+        justify-content: center;
+    }
+    
+    #menu-icones {
+        width: 100%;
+        border-top: 1px solid #ccc;
+        padding-top: 1rem;
+    }
 }

@@ -114,3 +114,27 @@
   background-color: #ccc;
   border-radius: 4px;
 }
+
+@media (max-width: 768px) {
+    .detail-container {
+        padding: 1rem 5vw; 
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; 
+        gap: 2rem;
+    }
+
+    .main-img {
+        height: auto;
+        max-height: 350px;
+    }
+
+    .title {
+        font-size: 1.8rem; 
+    }
+    
+    .thumbnails {
+        justify-content: center; 
+    }
+}

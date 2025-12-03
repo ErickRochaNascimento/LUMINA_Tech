@@ -20,7 +20,7 @@ h1 {
     background: var(--cor-fundo-principal);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     text-align: center;
 }
 
@@ -46,8 +46,8 @@ h1 {
     background: var(--cor-branco);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    max-width: 800px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -56,12 +56,12 @@ h1 {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     gap: 15px;
 }
 
 .header-dashboard h1 {
-    margin-bottom: 0; 
+    margin-bottom: 0;
 }
 
 .filter-box {
@@ -71,7 +71,7 @@ h1 {
     background: rgba(250, 0, 0, 0);
     padding: 10px 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .filter-box label {
@@ -84,7 +84,7 @@ h1 {
     padding: 8px 12px;
     border-radius: 6px;
     border: 1px solid var(--cor-detalhes);
-    background-color: #ffffff00 ;
+    background-color: #ffffff00;
     font-size: 0.95rem;
     color: var(--cor-texto-secundario);
     cursor: pointer;
@@ -97,33 +97,63 @@ h1 {
 }
 
 .filter-box select:focus {
-    border-color: var(--cor-destaque); 
+    border-color: var(--cor-destaque);
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
 }
 
 
 .chart-container {
     background-color: var(--cor-fundo-principal);
-    border-radius: 16px; 
+    border-radius: 16px;
     padding: 25px;
-    margin: 30px auto; 
-    
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); 
+    margin: 30px auto;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(0, 0, 0, 0.05);
-    
-    max-width: 1000px; 
-    width: 90%;     
-    
-    position: relative; 
-    height: 500px;     
+
+    max-width: 1000px;
+    width: 90%;
+
+    position: relative;
+    height: 500px;
 }
 
 @media (max-width: 768px) {
     .chart-container {
         padding: 15px;
-        height: 350px; 
+        height: 350px;
         width: 100%;
         border-radius: 12px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .header-dashboard {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+
+
+}
+
+
+@media (max-width: 600px) {
+    .header-dashboard {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-box {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .metric .value {
+        font-size: 1.5rem;
+    }
+
+    .chart-container canvas {
+        max-width: 100%;
     }
 }

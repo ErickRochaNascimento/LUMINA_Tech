@@ -119,3 +119,55 @@ a {
     color: #007bff;
     text-decoration: none;
 }
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    #header-logo {
+        height: auto;
+        margin-bottom: 0.5rem;
+    }
+
+    #header-logo h3 {
+        font-size: 3vh;
+        font-weight: 500;
+    }
+
+    #header-logo p {
+        font-size: 2vh;
+        font-weight: 300;
+    }
+
+    #menu {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    #menu li {
+        list-style: none;
+    }
+
+    #menu-icones {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    .search-container input {
+        width: 100%;
+    }
+
+    .user-area {
+        width: 100%;
+        justify-content: center;
+    }
+}
