@@ -34,7 +34,7 @@ h2 {
     color: var(--cor-texto-descricao);
     margin-bottom: 30px;
     font-style: italic;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--cor-detalhes);
     padding-bottom: 20px;
 }
 
@@ -54,11 +54,11 @@ h2 {
 }
 
 .feature-item {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: linear-gradient(135deg, var(--cor-detalhes) 0%, var(--cor-branco) 100%);
     padding: 25px;
     border-radius: 8px;
     text-align: left;
-    border: 1px solid #dee2e6;
+    border: 1px solid var(--cor-branco);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -93,7 +93,7 @@ h2 {
 }
 
 .tech-item {
-    color: #333;
+    color: var(--cor-texto-descricao);
     font-size: 1rem;
     line-height: 1.6;
 }
