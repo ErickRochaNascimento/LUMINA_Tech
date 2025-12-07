@@ -9,8 +9,8 @@ export const adminGuard: CanActivateFn = (route, state) => {
   if (authService.isAdmin()) {
     return true; // É admin, pode passar
   } else {
+    router.navigate(['/login']); // Manda para login
     alert('Acesso negado: Apenas administradores podem ver esta página.');
-    router.navigate(['/']); // Manda de volta para home
     return false;
   }
 };

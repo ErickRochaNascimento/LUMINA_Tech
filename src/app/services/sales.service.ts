@@ -1,4 +1,5 @@
 import { Injectable, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { Produto } from '../models/produto.model';
 import { AuthService } from './auth.service'; 
 
@@ -9,11 +10,14 @@ export class SalesService {
   private storageKey = 'lumina_sales';
   private authService = inject(AuthService); 
 
+  constructor(private router: Router) {}
+
   recordSale(produto: Produto): void {
     const user = this.authService.currentUser();
     
     if (!user) {
       alert('Por favor, faça login para comprar!');
+      this.router.navigate(['/login']);
       return;
     }
     
