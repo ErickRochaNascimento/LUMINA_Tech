@@ -10,7 +10,7 @@
             <img [src]="item.img" alt="Produto" width="80">
             <div class="info">
                 <h3>{{ item.productTitle }}</h3>
-                <p class="data">Comprado em: {{ item.date | date:'short' }}</p>
+                <p class="data">Comprado em: {{ item.date | date:'dd/MM/yyyy HH:mm' }}</p>
                 <p class="preco">{{ item.price | currency:'BRL' }}</p>
             </div>
         </div>
