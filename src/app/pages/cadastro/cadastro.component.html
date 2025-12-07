@@ -1,7 +1,8 @@
 <div class="auth-container">
     <h2>Crie sua Conta</h2>
     <form (ngSubmit)="registrar()">
-        <input type="text" [(ngModel)]="dados.nome" name="nome" placeholder="Nome Completo" required>
+        <input type="text" [(ngModel)]="dados.nome" name="nome" placeholder="Nome" required>
+        <input type="text" [(ngModel)]="dados.sobrenome" name="sobrenome" placeholder="Sobrenome" required>
         <input type="email" [(ngModel)]="dados.email" name="email" placeholder="E-mail" required>
         <input type="password" [(ngModel)]="dados.senha" name="senha" placeholder="Senha" required>
         <div class="termos-container">

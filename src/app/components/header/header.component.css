@@ -194,7 +194,7 @@ body.dark-theme .btn-theme:hover {
     }
 
     .search-container {
-        width: 100%;
+        width: 80%;
     }
 
     .search-container input {
@@ -204,5 +204,10 @@ body.dark-theme .btn-theme:hover {
     .user-area {
         width: 100%;
         justify-content: center;
+    }
+
+    #menu-icones{
+        display: flex;
+        flex-direction: row;
     }
 }

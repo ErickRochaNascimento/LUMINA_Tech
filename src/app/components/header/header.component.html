@@ -30,13 +30,11 @@
         <ng-template #loginTemplate>
             <a routerLink="/login" class="link-login">Login</a>
         </ng-template>
+        <button (click)="themeService.toggleTheme()" class="btn-theme" title="Alternar Tema">
+            <img [src]="themeService.isDarkTheme() ? 'iconSol.png' : 'iconLua.png'" alt="Ícone de tema"
+                class="icon-theme">
+        </button>
     </nav>
-    
-    <button (click)="themeService.toggleTheme()" class="btn-theme" title="Alternar Tema">
-    <img 
-        [src]="themeService.isDarkTheme() ? 'iconSol.png' : 'iconLua.png'" 
-        alt="Ícone de tema"
-        class="icon-theme"
-    >
-</button>
+
+
 </header>

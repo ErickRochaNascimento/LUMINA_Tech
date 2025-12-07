@@ -17,7 +17,7 @@ import { FooterComponent } from "../../components/footer/footer.component";
 export class CadastroComponent {
   auth = inject(AuthService);
   router = inject(Router);
-  dados = { nome: '', email: '', senha: '' };
+  dados = { nome: '',sobrenome: '', email: '', senha: '' };
   aceitouTermos = false;
 
   registrar() {
