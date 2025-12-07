@@ -1,5 +1,5 @@
 header {
-    width: 100vw;
+    width: 100%;
     background-color: var(--cor-fundo-principal);
     display: flex;
     align-items: center;
