@@ -1,10 +1,10 @@
 <div class="auth-container">
     <h2>Crie sua Conta</h2>
-    <form (ngSubmit)="registrar()">
+    <form (ngSubmit)="registrar()" #cadastroForm="ngForm">
         <input type="text" [(ngModel)]="dados.nome" name="nome" placeholder="Nome" required>
         <input type="text" [(ngModel)]="dados.sobrenome" name="sobrenome" placeholder="Sobrenome" required>
-        <input type="email" [(ngModel)]="dados.email" name="email" placeholder="E-mail" required>
-        <input type="password" [(ngModel)]="dados.senha" name="senha" placeholder="Senha" required>
+        <input type="email" [(ngModel)]="dados.email" name="email" placeholder="E-mail" required email>
+        <input type="password" [(ngModel)]="dados.senha" name="senha" placeholder="Senha" required minlength="6">
         <div class="termos-container">
             <label class="checkbox-label">
                 <input 
@@ -18,7 +18,8 @@
                 </span>
             </label>
         </div>
-       <button class="btn-primary" type="submit" [disabled]="!aceitouTermos">Cadastrar</button>
+        
+        <button class="btn-primary" type="submit" [disabled]="!aceitouTermos || cadastroForm.invalid">Cadastrar</button>
     </form>
     <p>Já tem conta? <a routerLink="/login">Faça Login</a></p>
 </div>
