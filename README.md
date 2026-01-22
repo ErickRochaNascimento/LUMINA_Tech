@@ -1,59 +1,66 @@
-# LUMINATech
+# 💡 LUMINA Tech - E-commerce de Eletrônicos
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
+A **LUMINA Tech** é uma plataforma moderna de e-commerce especializada em eletrônicos, desenvolvida com **Angular 19** e integrada à API pública **DummyJSON**. O projeto foi criado como uma solução completa para demonstrar as melhores práticas de desenvolvimento web moderno.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Sobre o Projeto
 
-```bash
-ng serve
-```
+O projeto foca em oferecer uma experiência de compra intuitiva e segura, utilizando uma arquitetura modular e escalável. A plataforma permite que os usuários naveguem por catálogos, realizem buscas avançadas e acompanhem estatísticas através de um dashboard administrativo robusto.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Diferenciais Técnicos:
+- **Arquitetura Modular:** Organização limpa e eficiente dos componentes.
+- **Gerenciamento de Estado:** Controle fluido dos dados da aplicação.
+- **Segurança:** Proteção de rotas administrativas e controle de sessão.
+- **Visualização de Dados:** Gráficos interativos para análise de vendas.
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## ✨ Funcionalidades Principais
 
-```bash
-ng generate component component-name
-```
+### 🛍️ Catálogo de Produtos
+Navegação completa por categorias como smartphones, laptops e tablets. Inclui filtros por marca (Samsung, Apple) e um sistema de busca em tempo real integrado à API DummyJSON.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### 🔐 Autenticação e Cadastro
+Sistema completo de login e cadastro com persistência em `LocalStorage`, validação de credenciais e controle rigoroso de sessão.
 
-```bash
-ng generate --help
-```
+### 📦 Painel de Pedidos
+Área exclusiva "Meus Pedidos" para usuários autenticados, permitindo a visualização do histórico de compras com detalhes de produtos, preços e datas.
 
-## Building
+### 📊 Dashboard Administrativo
+Painel de vendas avançado com gráficos interativos via **Chart.js**, exibindo:
+- Receita total.
+- Produtos mais vendidos.
+- Análise detalhada por categoria e marca.
 
-To build the project run:
+### 🛡️ Controle de Acesso
+Implementação de **Route Guards (AdminGuard)** para proteger áreas sensíveis, garantindo que apenas administradores autorizados (`admin@email.com`) acessem o dashboard.
 
-```bash
-ng build
-```
+### 📱 Design Responsivo
+Interface adaptável para qualquer dispositivo, utilizando componentes reutilizáveis como Header, Footer e Cards de Produto.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 🛠️ Tecnologias Utilizadas
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+| Tecnologia | Descrição |
+| :--- | :--- |
+| **Angular 19.2.19** | Framework principal para o desenvolvimento SPA. |
+| **TypeScript** | Linguagem base para um código mais seguro e tipado. |
+| **RxJS** | Programação reativa para lidar com fluxos de dados. |
+| **CSS3** | Estilização modular e design responsivo. |
+| **Chart.js** | Biblioteca para criação de gráficos dinâmicos. |
+| **DummyJSON** | API externa para consumo de dados reais de produtos. |
 
-```bash
-ng test
-```
+---
 
-## Running end-to-end tests
+## 🚀 Como Visualizar o Projeto
 
-For end-to-end (e2e) testing, run:
+🌐Acesse em: https://erickrochanascimento.github.io/HTMLCSS-SPRINT4/
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 🧑‍💻 Autor
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**Erick Rocha Nascimento**  
+🔗 [LinkedIn](https://www.linkedin.com/in/erickrochanascimento) | [GitHub](https://github.com/ErickRochaNascimento)
